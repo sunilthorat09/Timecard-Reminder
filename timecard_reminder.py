@@ -30,11 +30,11 @@ def main():
     app = QtGui.QApplication(sys.argv)
     while True:
         t = datetime.datetime.today()
-        if t.weekday() ==4 and t.hour > 9:
+        if t.weekday() == 4 and t.hour > 9:
             r = Reminder()
             ret = 0
             while not ret == 16384:
-                wait(1)
+                wait(1800)
                 ret = r.remind_again()
             r.thanks()
             wait(20*3600)  # Wait for 20hours
